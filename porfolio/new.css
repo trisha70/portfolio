@@ -1,0 +1,651 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    color: #ededed;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgb(18, 4, 25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover {
+    color: #ffcc00; /* Change to your preferred color */
+    transition: color 0.3s ease-in-out;
+    text-shadow: 0 0 20px rgba(206, 187, 218, 0.8);
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url("wallpaper.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+
+}
+
+.home-content h3 span {
+    color: #fff;
+
+}
+
+.profile-img {
+    width: 400px;
+    height: 450px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    box-shadow: 0px 4px 20px rgba(255, 105, 180, 0.8),
+        /* Pink glow */
+        0px 4px 30px rgba(0, 191, 255, 0.6);
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.home-sci a:hover {
+    background: #fff;
+    color: rgb(34, 2, 47);
+    box-shadow: 0 0 20px rgb(135, 34, 135);
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #fff;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 800px;
+    color: rgb(34, 2, 47);
+    text-decoration: none;
+    border: 2px solid purple;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px rgb(90, 35, 90);
+}
+
+.btn-box:hover {
+    background: rgb(34, 2, 47);
+    color: #fff;
+    border: 2px solid white;
+    box-shadow: 0 0 20px rgb(110, 21, 84);
+}
+.about {
+    width: 100%;
+    height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem; /* Space between image and text */
+    padding: 50px;
+    background: url("wallpaper.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* About Image Container */
+.about-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+/* Circular Image */
+.about-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0px 4px 20px rgba(255, 105, 180, 0.8),
+        /* Pink glow */
+        0px 4px 30px rgba(0, 191, 255, 0.6);
+}
+
+/* About Text Content */
+.about-text {
+    flex: 2;
+    text-align: left;
+    max-width: 600px;
+}
+
+/* Add spacing between elements */
+.about-text h2 {
+    font-size: 2rem;
+    color:#fff;
+    margin-bottom: 15px; /* Adds gap below the heading */
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+}
+
+.about-text h2 span {
+    color: #ff5733;
+}
+
+.about-text h4 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px; /* Adds gap below the subheading */
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+}
+
+.about-text p {
+    font-size: 1rem;
+    text-align: justify;
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 20px; /* Adds gap below the paragraph */
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+/* Services Section */
+.services {
+    background: url("wallpaper.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding: 50px 0;
+    /* background: linear-gradient(135deg, #4b0082, #007bff);  */
+    text-align: center;
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Section Title */
+.sub-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff; /* White Text */
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+}
+
+.sub-title span {
+    color: #ffcc00; /* Gold Highlight */
+}
+
+/* Services List */
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+/* Individual Service Box */
+.services-list div {
+    background: rgba(255, 255, 255, 0.1); /* Transparent White */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Glassmorphism Effect */
+}
+
+/* Hover Effect */
+.services-list div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Service Icon */
+.services-list i {
+    font-size: 40px;
+    color: #ffcc00; /* Gold Icons */
+    margin-bottom: 10px;
+}
+
+/* Service Title */
+.services-list h2 {
+    font-size: 1.5rem;
+    color: #fff; /* White Text */
+    margin-bottom: 10px;
+}
+
+/* Service Description */
+.services-list p {
+    font-size: 1rem;
+    color: #ddd; /* Light Gray Text */
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Read More Button */
+.read {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 25px;
+    color:rgb(34, 9, 57); /* Blue Text */
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid rgb(34, 9, 57);; /* Blue Border */
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+    background: #fff; /* White Background */
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.read:hover {
+    background: rgb(34, 9, 57); /* Blue Background */
+    color: white;
+    border: 2px solid white;
+}
+
+#projects {
+    background: url("wallpaper.jpg") no-repeat center center/cover;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Section Title */
+.sub-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.sub-title span {
+    color: #ffcc00;; /* Bluish Purple Highlight */
+}
+
+/* Projects List */
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Individual Project Card */
+.project-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.project-card.visible {
+    opacity: 1;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Project Title */
+.project-card h2 {
+    font-size: 1.8rem;
+    color: rgb(39, 3, 39);
+    margin-bottom: 15px;
+}
+
+/* Project Description */
+.project-card p {
+    font-size: 1rem;
+    color:rgb(39, 3, 39);
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+
+.project-card .btn-box:hover {
+    background-color: rgb(39, 3, 39); 
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animating project cards */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.projects-list .project-card {
+    animation: fadeIn 0.5s forwards;
+    animation-delay: 0.2s;
+}
+
+/* Adjusting for delay in animation */
+.projects-list .project-card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.projects-list .project-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.projects-list .project-card:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.projects-list .project-card:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.projects-list .project-card:nth-child(5) {
+    animation-delay: 0.7s;
+}
+
+.projects-list .project-card:nth-child(6) {
+    animation-delay: 0.8s;
+}
+#contact {
+    height:650px;
+    background:url("wallpaper.jpg");
+    color: white;
+    padding: 7% 0;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out ;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:350px;
+    width:auto;
+}
+
+.contact-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    backdrop-filter: blur(10px);
+    animation: slideIn 1s ease-in-out;
+}
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.input-box input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 15px;
+} 
+.contact-form .btn-box {
+    display: inline-block;
+    padding: 10px 20px;
+    background: white;
+    color:rgb(18, 4, 25);
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    border:3px solid rgb(18, 4, 25);
+    transition: 0.3s;
+}
+
+.btn-box:hover {
+    background: rgb(18, 4, 25);
+    color:#fff;
+    border:3px solid #fff;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+}
+footer {
+    background-color: #050108;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+.footer-socials {
+    margin-top: 10px;
+}
+.footer-socials a {
+    color: white;
+    font-size: 25px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.footer-socials a:hover {
+    color: purple;
+}
+.menu-toggle {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background: rgba(18, 4, 25, 0.9);
+        padding: 10px;
+        border-radius: 8px;
+    }
+    
+    .navbar.active {
+        display: flex;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+}
+.navbar a {
+    color: white; /* Default text color */
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background-color: yellow; /* Underline color */
+    transition: width 0.3s ease-in-out;
+}

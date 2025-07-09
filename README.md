@@ -13,7 +13,7 @@ Skills Display – Frontend and technical skills in a clean format
 
 
 
-🛠️ Technologies Used
+ Technologies Used
 HTML5 – For content structure
 
 CSS3 – For styling and responsive layout

@@ -19,3 +19,10 @@ HTML5 – For content structure
 CSS3 – For styling and responsive layout
 
 JavaScript – For interactivity and animations
+
+
+## 🚀 Live Website
+You can view the deployed version of this project here:  
+👉 [https://trisha-portfolio.netlify.app](## 🚀 Live Website
+You can view the deployed version of this project here:  
+👉 [https://trisha-portfolio.netlify.app](https://trishabanerjee-portfolio.netlify.app/)
